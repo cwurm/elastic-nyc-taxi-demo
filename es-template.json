@@ -1,0 +1,35 @@
+{
+	"template": "nyc_taxi-*",
+	"settings": {
+		"index.refresh_interval" : "10",
+		"number_of_shards": 2,
+		"number_of_replicas": 0
+	},
+	"order": 1,
+	"mappings": {
+		"rides": {
+			"_all": {
+				"enabled": false
+			},
+			"_source": {
+				"enabled": true
+			},
+			"properties": {
+				"pickup_datetime": {
+					"type": "date",
+					"format": "yyyy-MM-dd HH:mm:ss"
+				},
+				"dropoff_datetime": {
+					"type": "date",
+					"format": "yyyy-MM-dd HH:mm:ss"
+				},
+				"pickup": {
+					"type": "geo_point"
+				},
+				"dropoff": {
+					"type": "geo_point"
+				}
+			}
+		}
+	}
+}

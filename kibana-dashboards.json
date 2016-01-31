@@ -1,0 +1,59 @@
+[
+  {
+    "_id": "NYC-Taxi:-Pickup-predictions",
+    "_type": "dashboard",
+    "_source": {
+      "title": "NYC Taxi: Pickup predictions",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"NYC-Taxi:-Predictions\",\"panelIndex\":2,\"row\":5,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NYC-Taxi:-Pickup-date-histogram-(HOURLY)\",\"panelIndex\":3,\"row\":1,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "2014-12-04T18:55:29.375Z",
+      "timeFrom": "2014-11-24T02:32:50.925Z",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Pickup-and-Dropoff-(FULL)",
+    "_type": "dashboard",
+    "_source": {
+      "title": "NYC Taxi: Pickup and Dropoff (FULL)",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"NYC-Taxi:-Pickup-date-histogram\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":10,\"size_y\":3,\"col\":3,\"row\":1},{\"id\":\"NYC-Taxi:-Pickup-map\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":6,\"size_y\":5,\"col\":1,\"row\":6},{\"id\":\"NYC-Taxi:-Dropoff-map\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":6,\"size_y\":5,\"col\":7,\"row\":6},{\"id\":\"NYC-Taxi:-Markdown\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":2,\"size_y\":3,\"col\":1,\"row\":1},{\"id\":\"NYC-Taxi:-Fare-Histogram\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":9,\"size_y\":2,\"col\":4,\"row\":4},{\"id\":\"NYC-Taxi:-Passenger-count-pie-chart\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":4}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "2014-12-01T13:05:26.227Z",
+      "timeFrom": "2014-10-31T12:04:27.923Z",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Pickup-and-Dropoff",
+    "_type": "dashboard",
+    "_source": {
+      "title": "NYC Taxi: Pickup and Dropoff",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"NYC-Taxi:-Pickup-date-histogram\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":10,\"size_y\":3,\"col\":3,\"row\":1},{\"id\":\"NYC-Taxi:-Pickup-map\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":6,\"size_y\":5,\"col\":1,\"row\":4},{\"id\":\"NYC-Taxi:-Dropoff-map\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":6,\"size_y\":5,\"col\":7,\"row\":4},{\"id\":\"NYC-Taxi:-Markdown\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":2,\"size_y\":3,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "2014-12-01T13:05:26.227Z",
+      "timeFrom": "2014-10-31T12:04:27.923Z",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  }
+]

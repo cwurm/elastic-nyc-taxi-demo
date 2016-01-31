@@ -1,0 +1,114 @@
+[
+  {
+    "_id": "NYC-Taxi:-Fare-Histogram",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Fare Histogram",
+      "visState": "{\"type\":\"area\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"smoothLines\":true,\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"fare_amount\",\"interval\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nyc_taxi-2014-11\",\"query\":{\"query_string\":{\"query\":\"fare_amount:<60\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Passenger-count-pie-chart",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Passenger count pie chart",
+      "visState": "{\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"passenger_count\",\"interval\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nyc_taxi-2014-11\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Pickup-date-histogram",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Pickup date histogram",
+      "visState": "{\n  \"type\": \"histogram\",\n  \"params\": {\n    \"shareYAxis\": true,\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"scale\": \"linear\",\n    \"mode\": \"stacked\",\n    \"times\": [],\n    \"addTimeMarker\": false,\n    \"defaultYExtents\": false,\n    \"setYExtents\": false,\n    \"yAxis\": {}\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"type\": \"date_histogram\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"field\": \"pickup_datetime\",\n        \"interval\": \"auto\",\n        \"customInterval\": \"2h\",\n        \"min_doc_count\": 1,\n        \"extended_bounds\": {}\n      }\n    }\n  ],\n  \"listeners\": {}\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"nyc_taxi-2014-11\",\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true\n    }\n  },\n  \"filter\": []\n}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Pickup-date-histogram-(HOURLY)",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Pickup date histogram (HOURLY)",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"pickup_datetime\",\"interval\":\"h\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nyc_taxi-2014-11\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Markdown",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Markdown",
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"# NYC Taxi pickup and dropoff\\n\\n## [All Data][1]\\n## [3 days][2]\\n\\n[1]: #/dashboard/NYC-Taxi:-Pickup-and-Dropoff?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'2014-10-31T12:04:27.923Z',mode:quick,to:'2014-12-01T13:05:26.227Z'))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:3,id:'NYC-Taxi:-Pickup-date-histogram',panelIndex:1,row:1,size_x:10,size_y:3,type:visualization),(col:1,id:'NYC-Taxi:-Pickup-map',panelIndex:2,row:4,size_x:6,size_y:5,type:visualization),(col:7,id:'NYC-Taxi:-Dropoff-map',panelIndex:3,row:4,size_x:6,size_y:5,type:visualization),(col:1,id:'NYC-Taxi:-Markdown',panelIndex:4,row:1,size_x:2,size_y:3,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:'NYC%20Taxi:%20Pickup%20and%20Dropoff',uiState:())\\n\\n[2]: #/dashboard/NYC-Taxi:-Pickup-and-Dropoff?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'2014-10-31T22:02:31.599Z',mode:absolute,to:'2014-11-03T22:26:51.997Z'))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:3,id:'NYC-Taxi:-Pickup-date-histogram',panelIndex:1,row:1,size_x:10,size_y:3,type:visualization),(col:1,id:'NYC-Taxi:-Pickup-map',panelIndex:2,row:4,size_x:6,size_y:5,type:visualization),(col:7,id:'NYC-Taxi:-Dropoff-map',panelIndex:3,row:4,size_x:6,size_y:5,type:visualization),(col:1,id:'NYC-Taxi:-Markdown',panelIndex:4,row:1,size_x:2,size_y:3,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:'NYC%20Taxi:%20Pickup%20and%20Dropoff',uiState:())\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Dropoff-map",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Dropoff map",
+      "visState": "{\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":\"16\",\"heatMinOpacity\":\"0.1\",\"heatRadius\":\"6\",\"heatBlur\":\"4\",\"heatNormalizeData\":true,\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"dropoff\",\"autoPrecision\":true,\"mapZoom\":13,\"mapCenter\":[40.74628158055554,-73.94657135009766],\"precision\":7}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nyc_taxi-2014-11\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Pickup-map",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Pickup map",
+      "visState": "{\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":\"16\",\"heatMinOpacity\":\"0.1\",\"heatRadius\":\"6\",\"heatBlur\":\"4\",\"heatNormalizeData\":true,\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"pickup\",\"autoPrecision\":true,\"mapZoom\":13,\"mapCenter\":[40.739518536862654,-73.89095306396484],\"precision\":7}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nyc_taxi-2014-11\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NYC-Taxi:-Predictions",
+    "_type": "visualization",
+    "_source": {
+      "title": "NYC Taxi: Predictions",
+      "visState": "{\n  \"type\": \"histogram\",\n  \"params\": {\n    \"shareYAxis\": true,\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"scale\": \"linear\",\n    \"mode\": \"stacked\",\n    \"times\": [],\n    \"addTimeMarker\": false,\n    \"defaultYExtents\": false,\n    \"setYExtents\": false,\n    \"yAxis\": {}\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"type\": \"sum\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"count\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"type\": \"date_histogram\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"field\": \"pickup_datetime\",\n        \"interval\": \"h\",\n        \"customInterval\": \"2h\",\n        \"min_doc_count\": 1,\n        \"extended_bounds\": {}\n      }\n    }\n  ],\n  \"listeners\": {}\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"nyc_taxi-predict\",\n  \"query\": {\n    \"query_string\": {\n      \"query\": \"*\",\n      \"analyze_wildcard\": true\n    }\n  },\n  \"filter\": []\n}"
+      }
+    }
+  }
+]
